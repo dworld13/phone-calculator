@@ -85,7 +85,8 @@ function addonTotal(target){return [...$(target).querySelectorAll('.addon-row')]
 function addAddon(target,name='',price=0,months=0){const row=document.createElement('div');row.className='addon-row';row.innerHTML=`<div class="addon-grid"><div class="field"><label>서비스명</label><input class="addon-name" type="text" placeholder="예: 컬러링"></div><div class="field"><label>월 금액 (원)</label><input class="addon-price" type="number" min="0" value="${price}"></div><div class="field"><label>유지 개월</label><input class="addon-months" type="number" min="0" max="24" value="${months}"></div><button type="button" class="smallbtn remove">삭제</button></div>`;row.querySelector('.addon-name').value=name;row.querySelectorAll('input').forEach(x=>x.addEventListener('input',calculate));row.querySelector('.remove').addEventListener('click',()=>{row.remove();calculate();});$(target).appendChild(row);calculate();}
 document.querySelectorAll('.add-addon').forEach(b=>b.addEventListener('click',()=>addAddon(b.dataset.target)));
 function calculate(){
- const selfRate=v('selfRate')/100;\n const self=v('selfPhone')+24*v('selfPlan')*(1-selfRate)+addonTotal('selfAddons');
+ const selfRate=v('selfRate')/100;
+ const self=v('selfPhone')+24*v('selfPlan')*(1-selfRate)+addonTotal('selfAddons');
  const sm=Math.min(24,v('selMonths')),pm=Math.min(24,v('pubMonths')),rate=v('selRate')/100;
  const sel=v('selPhone')+(sm*v('selPlan')+(24-sm)*v('selAfter'))*(1-rate)+addonTotal('selAddons');
  const pub=v('pubPhone')+pm*v('pubPlan')+(24-pm)*v('pubAfter')+addonTotal('pubAddons');
