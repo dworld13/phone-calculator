@@ -41,34 +41,34 @@ footer{text-align:center;color:var(--muted);font-size:12px;padding:0 16px 28px}
 <section class="card" id="selfCard">
 <h2>① 자급제</h2><p class="sub">기기를 직접 구매하고 사용할 요금제의 월 금액을 입력합니다.</p>
 <div class="field"><label for="selfPhone">휴대폰 최종 구매가격</label><input id="selfPhone" type="text" inputmode="numeric" autocomplete="off" min="0" value="1500000"></div>
-</div>
+
 <div class="field"><label for="selfPlan">월 통신요금 (선택약정 할인 전)</label><input id="selfPlan" type="text" inputmode="numeric" autocomplete="off" min="0" value="35000"><div class="hint">통신사 공식 홈페이지에서 확인한 할인 전 월정액을 입력하세요.</div></div>
 <div class="field"><label for="selfRate">자급제 선택약정 적용</label><select id="selfRate"><option value="0">선택약정 미적용 (0%)</option><option value="25" selected>선택약정 적용 (25%)</option></select><div class="hint">선택약정 가입이 가능한 통신사 요금제를 사용하는 경우 25%를 선택하세요. 알뜰폰 등 선택약정 미가입 요금제는 미적용을 선택하세요.</div></div>
 <div class="addons"><div class="addons-head"><b>부가서비스</b><button class="smallbtn add-addon" data-target="selfAddons">＋ 추가</button></div><div id="selfAddons"></div></div>
-<div class="field"><label for="selfExtra">기타 추가비용 (1회)</label><input id="selfExtra" type="text" inputmode="numeric" autocomplete="off" value="0"><div class="hint">예: 유심비, 배송비, 가입비 등</div>
+<div class="field"><label for="selfExtra">기타 추가비용 (1회)</label><input id="selfExtra" type="text" inputmode="numeric" autocomplete="off" value="0"><div class="hint">예: 유심비, 배송비, 가입비 등</div></div>
 <div class="calc"><span>24개월 총비용</span><strong id="selfTotal">-</strong></div>
 </section>
 <section class="card" id="selCard">
 <h2>② 성지 · 선택약정</h2><p class="sub">선택약정 가입 시 사용할 요금제 월 금액을 직접 입력합니다.</p>
 <div class="field"><label for="selPhone">휴대폰 최종 부담금 (할부원금/현완)</label><input id="selPhone" type="text" inputmode="numeric" autocomplete="off" min="0" value="300000"></div>
-</div>
+
 <div class="field"><label for="selPlan">초기 요금제 월 금액</label><input id="selPlan" type="text" inputmode="numeric" autocomplete="off" min="0" value="109000"></div>
 <div class="two"><div class="field"><label for="selMonths">초기 요금제 유지 (개월)</label><input id="selMonths" type="text" inputmode="numeric" autocomplete="off" min="0" max="24" value="6"></div>
 <div class="field"><label for="selRate">선택약정 할인율</label><select id="selRate"><option value="25" selected>25%</option><option value="0">0%</option></select></div></div>
 <div class="field"><label for="selAfter">이후 요금제 월 금액</label><input id="selAfter" type="text" inputmode="numeric" autocomplete="off" min="0" value="69000"></div>
 <div class="addons"><div class="addons-head"><b>부가서비스</b><button class="smallbtn add-addon" data-target="selAddons">＋ 추가</button></div><div id="selAddons"></div></div>
-<div class="field"><label for="selExtra">기타 추가비용 (1회)</label><input id="selExtra" type="text" inputmode="numeric" autocomplete="off" value="0"><div class="hint">예: 유심비, 가입비, 기타 일회성 비용</div>
+<div class="field"><label for="selExtra">기타 추가비용 (1회)</label><input id="selExtra" type="text" inputmode="numeric" autocomplete="off" value="0"><div class="hint">예: 유심비, 가입비, 기타 일회성 비용</div></div>
 <div class="calc"><span>24개월 총비용</span><strong id="selTotal">-</strong></div>
 </section>
 <section class="card" id="pubCard">
 <h2>③ 성지 · 공시지원금</h2><p class="sub">공시지원금 반영 후 기기 부담금과 요금제 월 금액을 직접 입력합니다.</p>
 <div class="field"><label for="pubPhone">휴대폰 최종 부담금 (할부원금/현완)</label><input id="pubPhone" type="text" inputmode="numeric" autocomplete="off" min="0" value="500000"></div>
-</div>
+
 <div class="field"><label for="pubPlan">초기 요금제 월 금액</label><input id="pubPlan" type="text" inputmode="numeric" autocomplete="off" min="0" value="109000"></div>
 <div class="field"><label for="pubMonths">초기 요금제 유지기간 (개월)</label><input id="pubMonths" type="text" inputmode="numeric" autocomplete="off" min="0" max="24" value="6"></div>
 <div class="field"><label for="pubAfter">이후 요금제 월 금액</label><input id="pubAfter" type="text" inputmode="numeric" autocomplete="off" min="0" value="69000"></div>
 <div class="addons"><div class="addons-head"><b>부가서비스</b><button class="smallbtn add-addon" data-target="pubAddons">＋ 추가</button></div><div id="pubAddons"></div></div>
-<div class="field"><label for="pubExtra">기타 추가비용 (1회)</label><input id="pubExtra" type="text" inputmode="numeric" autocomplete="off" value="0"><div class="hint">예: 유심비, 가입비, 기타 일회성 비용</div>
+<div class="field"><label for="pubExtra">기타 추가비용 (1회)</label><input id="pubExtra" type="text" inputmode="numeric" autocomplete="off" value="0"><div class="hint">예: 유심비, 가입비, 기타 일회성 비용</div></div>
 <div class="calc"><span>24개월 총비용</span><strong id="pubTotal">-</strong></div>
 </section>
 </div>
