@@ -40,28 +40,31 @@ footer{text-align:center;color:var(--muted);font-size:12px;padding:0 16px 28px}
 <div class="grid">
 <section class="card" id="selfCard">
 <h2>① 자급제</h2><p class="sub">기기를 직접 구매하고 사용할 요금제의 월 금액을 입력합니다.</p>
-<div class="field"><label for="selfPhone">휴대폰 최종 구매가격</label><input id="selfPhone" type="number" min="0" value="1500000"></div>
-<div class="field"><label for="selfPlan">월 통신요금 (선택약정 할인 전)</label><input id="selfPlan" type="number" min="0" value="35000"><div class="hint">통신사 공식 홈페이지에서 확인한 할인 전 월정액을 입력하세요.</div></div>
+<div class="field"><label for="selfPhone">휴대폰 최종 구매가격</label><input id="selfPhone" type="text" inputmode="numeric" autocomplete="off" min="0" value="1500000"></div>
+<div class="field"><label for="selfExtra">기타 추가비용 (1회)</label><input id="selfExtra" type="text" inputmode="numeric" autocomplete="off" value="0"><div class="hint">예: 유심비, 배송비, 가입비 등</div></div>
+<div class="field"><label for="selfPlan">월 통신요금 (선택약정 할인 전)</label><input id="selfPlan" type="text" inputmode="numeric" autocomplete="off" min="0" value="35000"><div class="hint">통신사 공식 홈페이지에서 확인한 할인 전 월정액을 입력하세요.</div></div>
 <div class="field"><label for="selfRate">자급제 선택약정 적용</label><select id="selfRate"><option value="0">선택약정 미적용 (0%)</option><option value="25" selected>선택약정 적용 (25%)</option></select><div class="hint">선택약정 가입이 가능한 통신사 요금제를 사용하는 경우 25%를 선택하세요. 알뜰폰 등 선택약정 미가입 요금제는 미적용을 선택하세요.</div></div>
 <div class="addons"><div class="addons-head"><b>부가서비스</b><button class="smallbtn add-addon" data-target="selfAddons">＋ 추가</button></div><div id="selfAddons"></div></div>
 <div class="calc"><span>24개월 총비용</span><strong id="selfTotal">-</strong></div>
 </section>
 <section class="card" id="selCard">
 <h2>② 성지 · 선택약정</h2><p class="sub">선택약정 가입 시 사용할 요금제 월 금액을 직접 입력합니다.</p>
-<div class="field"><label for="selPhone">휴대폰 최종 부담금 (할부원금/현완)</label><input id="selPhone" type="number" min="0" value="300000"></div>
-<div class="field"><label for="selPlan">초기 요금제 월 금액</label><input id="selPlan" type="number" min="0" value="109000"></div>
-<div class="two"><div class="field"><label for="selMonths">초기 요금제 유지 (개월)</label><input id="selMonths" type="number" min="0" max="24" value="6"></div>
+<div class="field"><label for="selPhone">휴대폰 최종 부담금 (할부원금/현완)</label><input id="selPhone" type="text" inputmode="numeric" autocomplete="off" min="0" value="300000"></div>
+<div class="field"><label for="selExtra">기타 추가비용 (1회)</label><input id="selExtra" type="text" inputmode="numeric" autocomplete="off" value="0"><div class="hint">예: 유심비, 가입비, 기타 일회성 비용</div></div>
+<div class="field"><label for="selPlan">초기 요금제 월 금액</label><input id="selPlan" type="text" inputmode="numeric" autocomplete="off" min="0" value="109000"></div>
+<div class="two"><div class="field"><label for="selMonths">초기 요금제 유지 (개월)</label><input id="selMonths" type="text" inputmode="numeric" autocomplete="off" min="0" max="24" value="6"></div>
 <div class="field"><label for="selRate">선택약정 할인율</label><select id="selRate"><option value="25" selected>25%</option><option value="0">0%</option></select></div></div>
-<div class="field"><label for="selAfter">이후 요금제 월 금액</label><input id="selAfter" type="number" min="0" value="69000"></div>
+<div class="field"><label for="selAfter">이후 요금제 월 금액</label><input id="selAfter" type="text" inputmode="numeric" autocomplete="off" min="0" value="69000"></div>
 <div class="addons"><div class="addons-head"><b>부가서비스</b><button class="smallbtn add-addon" data-target="selAddons">＋ 추가</button></div><div id="selAddons"></div></div>
 <div class="calc"><span>24개월 총비용</span><strong id="selTotal">-</strong></div>
 </section>
 <section class="card" id="pubCard">
 <h2>③ 성지 · 공시지원금</h2><p class="sub">공시지원금 반영 후 기기 부담금과 요금제 월 금액을 직접 입력합니다.</p>
-<div class="field"><label for="pubPhone">휴대폰 최종 부담금 (할부원금/현완)</label><input id="pubPhone" type="number" min="0" value="500000"></div>
-<div class="field"><label for="pubPlan">초기 요금제 월 금액</label><input id="pubPlan" type="number" min="0" value="109000"></div>
-<div class="field"><label for="pubMonths">초기 요금제 유지기간 (개월)</label><input id="pubMonths" type="number" min="0" max="24" value="6"></div>
-<div class="field"><label for="pubAfter">이후 요금제 월 금액</label><input id="pubAfter" type="number" min="0" value="69000"></div>
+<div class="field"><label for="pubPhone">휴대폰 최종 부담금 (할부원금/현완)</label><input id="pubPhone" type="text" inputmode="numeric" autocomplete="off" min="0" value="500000"></div>
+<div class="field"><label for="pubExtra">기타 추가비용 (1회)</label><input id="pubExtra" type="text" inputmode="numeric" autocomplete="off" value="0"><div class="hint">예: 유심비, 가입비, 기타 일회성 비용</div></div>
+<div class="field"><label for="pubPlan">초기 요금제 월 금액</label><input id="pubPlan" type="text" inputmode="numeric" autocomplete="off" min="0" value="109000"></div>
+<div class="field"><label for="pubMonths">초기 요금제 유지기간 (개월)</label><input id="pubMonths" type="text" inputmode="numeric" autocomplete="off" min="0" max="24" value="6"></div>
+<div class="field"><label for="pubAfter">이후 요금제 월 금액</label><input id="pubAfter" type="text" inputmode="numeric" autocomplete="off" min="0" value="69000"></div>
 <div class="addons"><div class="addons-head"><b>부가서비스</b><button class="smallbtn add-addon" data-target="pubAddons">＋ 추가</button></div><div id="pubAddons"></div></div>
 <div class="calc"><span>24개월 총비용</span><strong id="pubTotal">-</strong></div>
 </section>
@@ -70,9 +73,9 @@ footer{text-align:center;color:var(--muted);font-size:12px;padding:0 16px 28px}
 <div class="summary"><div><small>가장 저렴한 방식</small><strong id="winner">-</strong></div><div class="saving" id="saving">-</div></div>
 <div class="actions"><button class="secondary" id="reset">기본값으로 초기화</button><button class="primary" id="share">계산 결과 공유하기</button></div>
 <p class="note"><b>계산 기준</b><br>
-· 자급제: 기기 구매가격 + 24개월 통신비(선택약정 적용 선택 시 25% 할인) + 부가서비스 유지기간 비용<br>
-· 선택약정: 기기 부담금 + 초기/이후 요금제에 선택약정 할인 적용 + 부가서비스 비용<br>
-· 공시지원금: 기기 부담금(공시지원금 반영 후) + 초기/이후 요금제 + 부가서비스 비용<br>
+· 자급제: 기기 구매가격 + 기타 추가비용 + 24개월 통신비(선택약정 적용 선택 시 25% 할인) + 부가서비스 유지기간 비용<br>
+· 선택약정: 기기 부담금 + 기타 추가비용 + 초기/이후 요금제에 선택약정 할인 적용 + 부가서비스 비용<br>
+· 공시지원금: 기기 부담금(공시지원금 반영 후) + 기타 추가비용 + 초기/이후 요금제 + 부가서비스 비용<br>
 · 부가서비스는 서비스별 월 금액 × 유지 개월 수로 계산합니다. 여러 개 등록할 수 있습니다.<br>
 · 요금제 월 금액은 통신사 공식 홈페이지 또는 가입 안내에서 확인해 직접 입력하세요. 선택약정은 할인 전 월정액을 입력하면 계산기가 할인율을 적용합니다.<br>
 · 할부이자, 위약금, 유심비, 일회성 비용, 결합/제휴카드 할인은 별도 반영해야 합니다. 실제 성지 계약서의 할부원금/현완액을 입력하고 공시지원금을 이중 차감하지 마세요.</p>
@@ -80,23 +83,37 @@ footer{text-align:center;color:var(--muted);font-size:12px;padding:0 16px 28px}
 </section></main>
 <footer>휴대폰 구매 전 비교를 돕는 참고용 계산기입니다. 실제 계약 조건과 청구 금액을 반드시 확인하세요.</footer>
 <script>
-const $=id=>document.getElementById(id),v=id=>Math.max(0,Number($(id).value)||0),money=x=>Math.round(x).toLocaleString('ko-KR')+'원';
-function addonTotal(target){return [...$(target).querySelectorAll('.addon-row')].reduce((sum,row)=>{const price=Math.max(0,Number(row.querySelector('.addon-price').value)||0),months=Math.min(24,Math.max(0,Number(row.querySelector('.addon-months').value)||0));return sum+price*months;},0);}
-function addAddon(target,name='',price=0,months=0){const row=document.createElement('div');row.className='addon-row';row.innerHTML=`<div class="addon-grid"><div class="field"><label>서비스명</label><input class="addon-name" type="text" placeholder="예: 컬러링"></div><div class="field"><label>월 금액 (원)</label><input class="addon-price" type="number" min="0" value="${price}"></div><div class="field"><label>유지 개월</label><input class="addon-months" type="number" min="0" max="24" value="${months}"></div><button type="button" class="smallbtn remove">삭제</button></div>`;row.querySelector('.addon-name').value=name;row.querySelectorAll('input').forEach(x=>x.addEventListener('input',calculate));row.querySelector('.remove').addEventListener('click',()=>{row.remove();calculate();});$(target).appendChild(row);calculate();}
+const $=id=>document.getElementById(id),num=x=>Math.max(0,Number(String(x??'').replace(/,/g,'').trim())||0),v=id=>num($(id).value),money=x=>Math.round(x).toLocaleString('ko-KR')+'원';
+function addonTotal(target){return [...$(target).querySelectorAll('.addon-row')].reduce((sum,row)=>{const price=num(row.querySelector('.addon-price').value),months=Math.min(24,num(row.querySelector('.addon-months').value));return sum+price*months;},0);}
+function addAddon(target,name='',price=0,months=0){const row=document.createElement('div');row.className='addon-row';row.innerHTML=`<div class="addon-grid"><div class="field"><label>서비스명</label><input class="addon-name" type="text" placeholder="예: 컬러링"></div><div class="field"><label>월 금액 (원)</label><input class="addon-price" type="text" inputmode="numeric" autocomplete="off" min="0" value="${price}"></div><div class="field"><label>유지 개월</label><input class="addon-months" type="text" inputmode="numeric" autocomplete="off" min="0" max="24" value="${months}"></div><button type="button" class="smallbtn remove">삭제</button></div>`;row.querySelector('.addon-name').value=name;row.querySelectorAll('input').forEach(x=>x.addEventListener('input',calculate));row.querySelector('.remove').addEventListener('click',()=>{row.remove();calculate();});$(target).appendChild(row);calculate();}
 document.querySelectorAll('.add-addon').forEach(b=>b.addEventListener('click',()=>addAddon(b.dataset.target)));
+function formatInput(el){
+ if(!el || el.dataset.formatting==='off') return;
+ const raw=String(el.value||'').replace(/,/g,'').trim();
+ if(raw==='' || !/^\\d+(\\.\\d*)?$/.test(raw)) return;
+ const parts=raw.split('.');
+ parts[0]=Number(parts[0]).toLocaleString('en-US');
+ el.value=parts.join('.');
+}
+function formatAll(){
+ document.querySelectorAll('input[inputmode="numeric"]').forEach(formatInput);
+}
+document.addEventListener('focusout',e=>{
+ if(e.target.matches('input[inputmode="numeric"]')) formatInput(e.target);
+});
 function calculate(){
  const selfRate=v('selfRate')/100;
- const self=v('selfPhone')+24*v('selfPlan')*(1-selfRate)+addonTotal('selfAddons');
+ const self=v('selfPhone')+v('selfExtra')+24*v('selfPlan')*(1-selfRate)+addonTotal('selfAddons');
  const sm=Math.min(24,v('selMonths')),pm=Math.min(24,v('pubMonths')),rate=v('selRate')/100;
- const sel=v('selPhone')+(sm*v('selPlan')+(24-sm)*v('selAfter'))*(1-rate)+addonTotal('selAddons');
- const pub=v('pubPhone')+pm*v('pubPlan')+(24-pm)*v('pubAfter')+addonTotal('pubAddons');
+ const sel=v('selPhone')+v('selExtra')+(sm*v('selPlan')+(24-sm)*v('selAfter'))*(1-rate)+addonTotal('selAddons');
+ const pub=v('pubPhone')+v('pubExtra')+pm*v('pubPlan')+(24-pm)*v('pubAfter')+addonTotal('pubAddons');
  const items=[{name:'자급제',total:self},{name:'성지 · 선택약정',total:sel},{name:'성지 · 공시지원금',total:pub}],min=Math.min(self,sel,pub);
  $('selfTotal').textContent=money(self);$('selTotal').textContent=money(sel);$('pubTotal').textContent=money(pub);
  $('resultCards').innerHTML=items.map(x=>`<article class="result ${x.total===min?'best':''}"><div class="name">${x.name}</div><div class="amount">${money(x.total)}</div>${x.total===min?'<span class="tag">최저 비용</span>':`<div class="delta">최저가보다 ${money(x.total-min)} 더 지출</div>`}</article>`).join('');
  $('winner').textContent=items.filter(x=>x.total===min).map(x=>x.name).join(' / ');$('saving').textContent='최저가 기준\\n'+money(min);
 }
 document.querySelectorAll('input,select').forEach(el=>el.addEventListener('input',calculate));
-$('reset').addEventListener('click',()=>{const d={selfPhone:1500000,selfPlan:35000,selfRate:25,selfEtc:0,selPhone:300000,selPlan:109000,selMonths:6,selAfter:69000,selRate:25,pubPhone:500000,pubPlan:109000,pubMonths:6,pubAfter:69000};for(const [k,val] of Object.entries(d))if($(k))$(k).value=val;['selfAddons','selAddons','pubAddons'].forEach(id=>$(id).innerHTML='');calculate();});
+$('reset').addEventListener('click',()=>{const d={selfPhone:1500000,selfPlan:35000,selfRate:25,selfExtra:0,selPhone:300000,selExtra:0,selPlan:109000,selMonths:6,selAfter:69000,selRate:25,pubPhone:500000,pubExtra:0,pubPlan:109000,pubMonths:6,pubAfter:69000};for(const [k,val] of Object.entries(d))if($(k))$(k).value=val;['selfAddons','selAddons','pubAddons'].forEach(id=>$(id).innerHTML='');formatAll();calculate();});
 $('share').addEventListener('click',async()=>{const t=`휴대폰 24개월 총비용 비교\\n자급제: ${$('selfTotal').textContent}\\n성지 선택약정: ${$('selTotal').textContent}\\n성지 공시지원금: ${$('pubTotal').textContent}\\n최저 비용: ${$('winner').textContent}`;try{if(navigator.share)await navigator.share({title:'휴대폰 24개월 총비용 비교',text:t});else{await navigator.clipboard.writeText(t);alert('계산 결과를 복사했습니다.');}}catch(e){}});
-addAddon('selfAddons');addAddon('selAddons');addAddon('pubAddons');calculate();
+addAddon('selfAddons');addAddon('selAddons');addAddon('pubAddons');formatAll();calculate();
 </script></body></html>
